@@ -24,5 +24,10 @@
 
             throw new TokenPlacedOutOfOrderException();
         }
+
+        public bool CheckWinner(string token)
+        {
+            return true;
+        }
     }
 }
