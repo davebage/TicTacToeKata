@@ -7,7 +7,9 @@
 
         public void PlaceToken(string token, int xCoordinate, int yCoordinate)
         {
-            if (token == "X" && token != _lastToken && string.IsNullOrEmpty(_board[xCoordinate, yCoordinate]))
+            if (!string.IsNullOrEmpty(_board[xCoordinate, yCoordinate])) throw new PositionAlreadyOccupiedException();
+
+            if (token == "X" && token != _lastToken)
             {
                 _board[xCoordinate, yCoordinate] = token;
                 _lastToken = token;
@@ -20,7 +22,7 @@
                 return;
             }
 
-            throw new InvalidOperationException();
+            throw new TokenPlacedOutOfOrderException();
         }
     }
 }

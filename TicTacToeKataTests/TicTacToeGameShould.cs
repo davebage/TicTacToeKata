@@ -17,7 +17,8 @@ namespace TicTacToeKataTests
         [Test]
         public void Prevent_O_From_Going_First()
         {
-            Assert.Throws<InvalidOperationException>(() => _ticTacToeGame.PlaceToken("O", 0, 0));
+            Assert.Throws<TokenPlacedOutOfOrderException>(() => 
+                _ticTacToeGame.PlaceToken("O", 0, 0));
         }
 
         [Test]
@@ -30,22 +31,24 @@ namespace TicTacToeKataTests
         public void Prevent_X_From_Going_Twice_In_A_Row()
         {
             _ticTacToeGame.PlaceToken("X", 0, 0);
-            Assert.Throws<InvalidOperationException>(() => _ticTacToeGame.PlaceToken("X", 0, 0));
+            Assert.Throws<TokenPlacedOutOfOrderException>(() =>
+                _ticTacToeGame.PlaceToken("X", 0, 1));
         }
 
         [Test]
         public void Prevent_O_From_Going_Twice_In_A_Row()
         {
             _ticTacToeGame.PlaceToken("X", 0, 0);
-            _ticTacToeGame.PlaceToken("O", 0, 0);
-            Assert.Throws<InvalidOperationException>(() => _ticTacToeGame.PlaceToken("O", 0, 0));
+            _ticTacToeGame.PlaceToken("O", 0, 1);
+            Assert.Throws<TokenPlacedOutOfOrderException>(() => 
+                _ticTacToeGame.PlaceToken("O", 0, 2));
         }
 
         [Test]
         public void Allow_O_To_Be_Placed_Second()
         {
             _ticTacToeGame.PlaceToken("X", 0, 0);
-            _ticTacToeGame.PlaceToken("O", 0, 0);
+            _ticTacToeGame.PlaceToken("O", 0, 1);
 
             // Assert no exception is thrown.
         }
@@ -65,7 +68,8 @@ namespace TicTacToeKataTests
         {
             _ticTacToeGame.PlaceToken("X", 0, 0);
             _ticTacToeGame.PlaceToken("O", 0, 1);
-            Assert.Throws<InvalidOperationException>(() => _ticTacToeGame.PlaceToken("X", 0, 0));
+            Assert.Throws<PositionAlreadyOccupiedException>(() => 
+                _ticTacToeGame.PlaceToken("X", 0, 0));
         }
     }
 }
