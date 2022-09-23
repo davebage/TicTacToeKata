@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\TicTacToeKataTests\\TicTacToeKataTests.csproj": {}
+    "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\TicTacToeKataTests\\TicTacToeKataTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\TicTacToeKataTests\\TicTacToeKataTests.csproj": {
+    "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\TicTacToeKataTests\\TicTacToeKataTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\TicTacToeKataTests\\TicTacToeKataTests.csproj",
+        "projectUniqueName": "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\TicTacToeKataTests\\TicTacToeKataTests.csproj",
         "projectName": "TicTacToeKataTests",
-        "projectPath": "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\TicTacToeKataTests\\TicTacToeKataTests.csproj",
-        "packagesPath": "C:\\Users\\Codurance_Dave\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\TicTacToeKataTests\\obj\\",
+        "projectPath": "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\TicTacToeKataTests\\TicTacToeKataTests.csproj",
+        "packagesPath": "C:\\Users\\happiness\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\TicTacToeKataTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Codurance_Dave\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\happiness\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj": {
-                "projectPath": "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj"
+              "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj": {
+                "projectPath": "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj"
               }
             }
           }
@@ -72,7 +72,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,25 +82,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.109\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj": {
+    "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj",
+        "projectUniqueName": "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj",
         "projectName": "Tic_Tac_Toe_Kata",
-        "projectPath": "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj",
-        "packagesPath": "C:\\Users\\Codurance_Dave\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Codurance_Dave\\projects\\Agile_Practices_Distilled\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata\\obj\\",
+        "projectPath": "C:\\Users\\happiness\\source\\repos\\TicTacToeKata\\Tic_Tac_Toe_Kata\\Tic_Tac_Toe_Kata.csproj",
+        "packagesPath": "C:\\Users\\happiness\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\happiness\\Source\\Repos\\TicTacToeKata\\Tic_Tac_Toe_Kata\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Codurance_Dave\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\happiness\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -108,6 +108,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -131,7 +132,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -140,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.109\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
