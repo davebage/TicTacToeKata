@@ -28,25 +28,14 @@
 
         public bool CheckWinner(string token)
         {
-            if (token == "X" && _board[0, 2] == "X" && _board[1, 2] == "X" && _board[2, 2] == "X")
+            if (_board[0, 2] == token && _board[1, 2] == token && _board[2, 2] == token)
                 return true;
 
-            if (token == "O" && _board[0, 2] == "O" && _board[1, 2] == "O" && _board[2, 2] == "O")
+            if (_board[0, 1] == token && _board[1, 1] == token && _board[2, 1] == token)
                 return true;
 
-            if (token == "X" && _board[0, 1] == "X" && _board[1, 1] == "X" && _board[2, 1] == "X")
+            if (_board[0, 0] == token && _board[1, 0] == token && _board[2, 0] == token)
                 return true;
-
-            if (token == "O" && _board[0, 1] == "O" && _board[1, 1] == "O" && _board[2, 1] == "O")
-                return true;
-
-            if (token == "X" && _board[0, 0] == "X" && _board[1, 0] == "X" && _board[2, 0] == "X")
-                return true;
-
-
-            if (token == "O" && _board[0, 0] == "O" && _board[1, 0] == "O" && _board[2, 0] == "O")
-                return true;
-
 
 
             return false;
