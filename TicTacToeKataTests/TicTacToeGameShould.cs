@@ -6,6 +6,7 @@ namespace TicTacToeKataTests
 {
     public class TicTacToeGameShould
     {
+
         private TicTacToeGame _ticTacToeGame;
         
         [SetUp]
@@ -99,13 +100,13 @@ namespace TicTacToeKataTests
             Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
 
             _ticTacToeGame.PlaceToken("O", 0, 0);
-            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
 
             _ticTacToeGame.PlaceToken("X", 1, 2);
             Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
 
             _ticTacToeGame.PlaceToken("O", 0, 1);
-            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
 
             _ticTacToeGame.PlaceToken("X", 2, 2);
             Assert.IsTrue(_ticTacToeGame.CheckWinner("X"));
@@ -141,39 +142,84 @@ namespace TicTacToeKataTests
             Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
 
             _ticTacToeGame.PlaceToken("O", 0, 0);
-            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
 
             _ticTacToeGame.PlaceToken("X", 1, 1);
             Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
 
             _ticTacToeGame.PlaceToken("O", 0, 2);
-            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
 
             _ticTacToeGame.PlaceToken("X", 2, 1);
             Assert.IsTrue(_ticTacToeGame.CheckWinner("X"));
         }
 
         [Test]
-        public void Mark_0_As_Winner_On_Middle_Row_After_Three_Moves_And_Not_Before()
+        public void Mark_O_As_Winner_On_Middle_Row_After_Three_Moves_And_Not_Before()
         {
             _ticTacToeGame.PlaceToken("X", 0, 0);
             Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
 
             _ticTacToeGame.PlaceToken("O", 0, 1);
-            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
 
             _ticTacToeGame.PlaceToken("X", 1, 0);
             Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
 
             _ticTacToeGame.PlaceToken("O", 1, 1);
-            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
 
             _ticTacToeGame.PlaceToken("X", 0, 2);
             Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
 
             _ticTacToeGame.PlaceToken("O", 2, 1);
+            Assert.IsTrue(_ticTacToeGame.CheckWinner("O"));
+        }
+
+
+        [Test]
+        public void Mark_X_As_Winner_On_Bottom_Row_After_Three_Moves_And_Not_Before()
+        {
+            _ticTacToeGame.PlaceToken("X", 0, 0);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", 0, 1);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
+
+            _ticTacToeGame.PlaceToken("X", 1, 0);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", 0, 2);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
+
+            _ticTacToeGame.PlaceToken("X", 2, 0);
             Assert.IsTrue(_ticTacToeGame.CheckWinner("X"));
         }
+
+
+        [Test]
+        public void Mark_O_As_Winner_On_Bottom_Row_After_Three_Moves_And_Not_Before()
+        {
+            _ticTacToeGame.PlaceToken("X", 0, 1);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", 0, 0);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
+
+            _ticTacToeGame.PlaceToken("X", 1, 1);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", 1, 0);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
+
+            _ticTacToeGame.PlaceToken("X", 0, 2);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", 2, 0);
+            Assert.IsTrue(_ticTacToeGame.CheckWinner("O"));
+        }
+
+
 
     }
 }
