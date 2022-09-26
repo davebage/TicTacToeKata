@@ -40,6 +40,15 @@
             if (token == "O" && _board[0, 1] == "O" && _board[1, 1] == "O" && _board[2, 1] == "O")
                 return true;
 
+            if (token == "X" && _board[0, 0] == "X" && _board[1, 0] == "X" && _board[2, 0] == "X")
+                return true;
+
+
+            if (token == "O" && _board[0, 0] == "O" && _board[1, 0] == "O" && _board[2, 0] == "O")
+                return true;
+
+
+
             return false;
         }
     }
