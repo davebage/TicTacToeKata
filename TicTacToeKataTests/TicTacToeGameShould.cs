@@ -434,6 +434,21 @@ namespace TicTacToeKataTests
 
         }
 
+        [Test]
+        public void Report_No_Winner_When_No_Moves_Left()
+        {
+            _ticTacToeGame.PlaceToken("X", MIDDLE_COLUMN, TOP_ROW);
+            _ticTacToeGame.PlaceToken("O", FIRST_COLUMN, TOP_ROW);
+            _ticTacToeGame.PlaceToken("X", LAST_COLUMN, TOP_ROW);
+            _ticTacToeGame.PlaceToken("O", LAST_COLUMN, MIDDLE_ROW);
+            _ticTacToeGame.PlaceToken("X", FIRST_COLUMN, MIDDLE_ROW);
+            _ticTacToeGame.PlaceToken("O", FIRST_COLUMN, BOTTOM_ROW);
+            _ticTacToeGame.PlaceToken("X", MIDDLE_COLUMN, MIDDLE_ROW);
+            _ticTacToeGame.PlaceToken("O", MIDDLE_COLUMN, BOTTOM_ROW);
+            _ticTacToeGame.PlaceToken("X", LAST_COLUMN, BOTTOM_ROW);
+
+            Assert.Throws<NoWinnerException>(() => _ticTacToeGame.CheckWinner("X"));
+        }
 
     }
 }

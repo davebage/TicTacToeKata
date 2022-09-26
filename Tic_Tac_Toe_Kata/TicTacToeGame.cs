@@ -1,4 +1,6 @@
-﻿namespace Tic_Tac_Toe_Kata
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Tic_Tac_Toe_Kata
 {
     public class TicTacToeGame
     {
@@ -50,6 +52,16 @@
             if (_board[0, 0] == token && _board[1, 0] == token && _board[2, 0] == token)
                 return true;
 
+            if (!BoardHasEmptySquare()) throw new NoWinnerException();
+
+            return false;
+        }
+
+        private bool BoardHasEmptySquare()
+        {
+            foreach (var boardSquare in _board)
+                if (string.IsNullOrWhiteSpace(boardSquare))
+                    return true;
 
             return false;
         }
