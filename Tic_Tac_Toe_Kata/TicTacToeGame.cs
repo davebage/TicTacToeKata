@@ -18,6 +18,7 @@
 
             if (token == "O" && token != _lastToken && _lastToken != string.Empty)
             {
+                _board[xCoordinate, yCoordinate] = token;
                 _lastToken = token;
                 return;
             }
@@ -27,7 +28,19 @@
 
         public bool CheckWinner(string token)
         {
-            return true;
+            if (token == "X" && _board[0, 2] == "X" && _board[1, 2] == "X" && _board[2, 2] == "X")
+                return true;
+
+            if (token == "O" && _board[0, 2] == "O" && _board[1, 2] == "O" && _board[2, 2] == "O")
+                return true;
+
+            if (token == "X" && _board[0, 1] == "X" && _board[1, 1] == "X" && _board[2, 1] == "X")
+                return true;
+
+            if (token == "O" && _board[0, 1] == "O" && _board[1, 1] == "O" && _board[2, 1] == "O")
+                return true;
+
+            return false;
         }
     }
 }
