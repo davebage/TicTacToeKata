@@ -2,9 +2,32 @@
 {
     public class TicTacToeGame
     {
-        public void PlaceToken(string token, int board_x, int board_y)
+        private string _lastToken = string.Empty;
+        private string[,] _board = new string[3, 3];
+
+        public void PlaceToken(string token, int xCoordinate, int yCoordinate)
         {
-            throw new InvalidOperationException();
+            if (!string.IsNullOrEmpty(_board[xCoordinate, yCoordinate])) throw new PositionAlreadyOccupiedException();
+
+            if (token == "X" && token != _lastToken)
+            {
+                _board[xCoordinate, yCoordinate] = token;
+                _lastToken = token;
+                return;
+            }
+
+            if (token == "O" && token != _lastToken && _lastToken != string.Empty)
+            {
+                _lastToken = token;
+                return;
+            }
+
+            throw new TokenPlacedOutOfOrderException();
+        }
+
+        public bool CheckWinner(string token)
+        {
+            return true;
         }
     }
 }
