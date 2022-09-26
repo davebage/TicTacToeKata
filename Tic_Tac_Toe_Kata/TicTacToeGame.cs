@@ -48,7 +48,7 @@ namespace Tic_Tac_Toe_Kata
             return false;
         }
 
-        protected virtual bool VerticalWinCheck(string token, int columnNumber)
+        private bool VerticalWinCheck(string token, int columnNumber)
         {
             return _board[columnNumber, 0] == token && 
                    _board[columnNumber, 1] == token && 
