@@ -309,6 +309,47 @@ namespace TicTacToeKataTests
             Assert.IsTrue(_ticTacToeGame.CheckWinner("O"));
         }
 
+        [Test]
+        public void Mark_X_As_Winner_On_Last_Column_And_Not_Before()
+        {
+            _ticTacToeGame.PlaceToken("X", LAST_COLUMN, BOTTOM_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", FIRST_COLUMN, BOTTOM_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
+
+            _ticTacToeGame.PlaceToken("X", LAST_COLUMN, MIDDLE_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", FIRST_COLUMN, MIDDLE_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
+
+            _ticTacToeGame.PlaceToken("X", LAST_COLUMN, TOP_ROW);
+            Assert.IsTrue(_ticTacToeGame.CheckWinner("X"));
+        }
+
+        [Test]
+        public void Mark_O_As_Winner_On_Last_Column_After_Three_Moves_And_Not_Before()
+        {
+            _ticTacToeGame.PlaceToken("X", FIRST_COLUMN, BOTTOM_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", LAST_COLUMN, BOTTOM_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
+
+            _ticTacToeGame.PlaceToken("X", MIDDLE_COLUMN, MIDDLE_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", LAST_COLUMN, MIDDLE_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("O"));
+
+            _ticTacToeGame.PlaceToken("X", FIRST_COLUMN, TOP_ROW);
+            Assert.IsFalse(_ticTacToeGame.CheckWinner("X"));
+
+            _ticTacToeGame.PlaceToken("O", LAST_COLUMN, TOP_ROW);
+            Assert.IsTrue(_ticTacToeGame.CheckWinner("O"));
+        }
+
 
     }
 }
