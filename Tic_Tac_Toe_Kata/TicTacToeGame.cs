@@ -42,19 +42,20 @@ namespace Tic_Tac_Toe_Kata
             if (_board[2, 0] == token && _board[2, 1] == token && _board[2, 2] == token)
                 return true;
 
-
-            if (_board[0, 2] == token && _board[1, 2] == token && _board[2, 2] == token)
-                return true;
-
-            if (_board[0, 1] == token && _board[1, 1] == token && _board[2, 1] == token)
-                return true;
-
-            if (_board[0, 0] == token && _board[1, 0] == token && _board[2, 0] == token)
-                return true;
+            for (int rowIndex = 0; rowIndex < 3; rowIndex++)
+                if(HorizontalWinCheck(token, rowIndex))
+                    return HorizontalWinCheck(token, rowIndex);
 
             if (!BoardHasEmptySquare()) throw new NoWinnerException();
 
             return false;
+        }
+
+        private bool HorizontalWinCheck(string token, int rowNumber)
+        {
+            return _board[0, rowNumber] == token && 
+                   _board[1, rowNumber] == token && 
+                   _board[2, rowNumber] == token;
         }
 
         private bool BoardHasEmptySquare()
