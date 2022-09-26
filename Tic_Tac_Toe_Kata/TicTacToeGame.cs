@@ -28,6 +28,8 @@
 
         public bool CheckWinner(string token)
         {
+            if (_board[0, 2] == token && _board[1, 1] == token && _board[2, 0] == token)
+                return true;
             if (_board[0, 0] == token && _board[1, 1] == token && _board[2, 2] == token)
                 return true;
 
